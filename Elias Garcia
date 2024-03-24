@@ -1,0 +1,29 @@
+package jv.esgh.listadevocales;
+
+import java.util.Scanner;
+
+public class ContadorVocales {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingrese una cadena de texto: ");
+        String cadena = scanner.nextLine();
+
+        int vocalesMayusculas = 0;
+        int vocalesMinusculas = 0;
+
+        for (int i = 0; i < cadena.length(); i++) {
+            char caracter = cadena.charAt(i);
+            if (Character.isUpperCase(caracter) && (caracter == 'A' || caracter == 'E' || caracter == 'I' || caracter == 'O' || caracter == 'U')) {
+                vocalesMayusculas++;
+            } else if (Character.isLowerCase(caracter) && (caracter == 'a' || caracter == 'e' || caracter == 'i' || caracter == 'o' || caracter == 'u')) {
+                vocalesMinusculas++;
+            }
+        }
+        
+        System.out.println("vocales mayusculas: " + vocalesMayusculas );
+        System.out.println("vocales minusculas: " + vocalesMinusculas );
+
+	}
+}
+
